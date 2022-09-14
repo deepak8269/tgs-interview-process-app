@@ -1,0 +1,2 @@
+#Files to be ignored from pushing into the repository
+*.js text eol=lf

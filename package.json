@@ -1,0 +1,140 @@
+{
+  "name": "@teamgeeksolution/interviewApp",
+  "version": "1.0.0",
+  "dependencies": {
+    "@babel/runtime": "7.13.10",
+    "@draft-js-plugins/buttons": "^4.2.0",
+    "@draft-js-plugins/editor": "^4.1.2",
+    "@draft-js-plugins/static-toolbar": "^4.1.2",
+    "@emotion/react": "11.9.0",
+    "@emotion/styled": "11.8.1",
+    "@hookform/resolvers": "^2.8.8",
+    "@mui/icons-material": "^5.5.0",
+    "@mui/lab": "^5.0.0-alpha.99",
+    "@mui/material": "5.6.1",
+    "@mui/utils": "5.6.1",
+    "@mui/x-date-pickers": "^5.0.1",
+    "aws-sdk": "^2.1107.0",
+    "dayjs": "^1.10.8",
+    "dotenv": "^16.0.0",
+    "draft-js": "^0.11.7",
+    "draft-js-export-html": "^1.4.1",
+    "express": "^4.18.1",
+    "framer-motion": "^6.2.8",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-hook-form": "^7.27.1",
+    "react-phone-input-2": "^2.15.0",
+    "react-redux": "8.0.0",
+    "react-router-dom": "6.3.0",
+    "react-scripts": "5.0.0",
+    "redux": "4.2.0",
+    "redux-persist": "^6.0.0",
+    "web-vitals": "^2.1.0",
+    "yup": "^0.32.11"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "build:start": "cd dist && PORT=8080 npx serve",
+    "start": "node server.js",
+    "heroku-postbuild": "yarn cache clean --all && yarn build",
+    "start:dev": "webpack serve --open --mode development",
+    "start:live": "webpack serve --open --mode development --live-reload --hot",
+    "clean": "rm -rf dist",
+    "copy": "cp package.json dist/package.json && cp README.md dist/README.md",
+    "prepare-package": "npm run clean && NODE_ENV=production babel src --out-dir dist --copy-files && npm run copy",
+    "prepare": "husky install",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|vue)\""
+  },
+  "main": "exports.js",
+  "devDependencies": {
+    "@babel/cli": "7.0.0",
+    "@babel/core": "7.15.8",
+    "@babel/plugin-transform-runtime": "7.15.8",
+    "@babel/preset-env": "7.15.8",
+    "@babel/preset-react": "7.14.5",
+    "autoprefixer": "10.1.0",
+    "babel-loader": "8.2.2",
+    "css-loader": "6.3.0",
+    "dotenv-webpack": "^7.1.0",
+    "eslint": "8.12.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.29.4",
+    "eslint-plugin-react-hooks": "4.4.0",
+    "html-webpack-plugin": "5.3.2",
+    "husky": "7.0.4",
+    "json-loader": "^0.5.7",
+    "lint-staged": "12.3.7",
+    "postcss": "8.2.1",
+    "postcss-loader": "4.1.0",
+    "prettier": "2.6.1",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "source-map-explorer": "^2.5.2",
+    "style-loader": "3.3.0",
+    "terser-webpack-plugin": "^5.3.1",
+    "webpack": "5.57.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "4.3.1"
+  },
+  "peerDependencies": {
+    "react": "18.0.0",
+    "react-dom": "18.0.0"
+  },
+  "description": "Interview App for the teamgeeksolution",
+  "directories": {
+    "lib": "src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teamgeeksolution/tgs-onboarding-module-v2.git"
+  },
+  "keywords": [
+    "mf",
+    "react",
+    "javascript",
+    "package"
+  ],
+  "license": "MIT",
+  "author": "Team Geek Solutions (https://teamgeeksolutions.com)",
+  "contributors": [
+    "Priyanka Sharma <priyanka@thegeeksquad.tech>",
+    "Shadman Khan <shadman@thegeeksquad.tech>",
+    "Sridhar T <sridhar@thegeeksquad.tech>",
+    "Vivek Dwivedi <vivek@thegeeksquad.tech>",
+    "Roshan Sharma <roshan@thegeeksquad.tech>",
+    "Riya Singh <riya@thegeeksquad.tech>"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/teamgeeksolution/tgs-onboarding-module-v2/issues"
+  },
+  "homepage": "https://github.com/teamgeeksolution/tgs-onboarding-module-v2#readme",
+  "engines": {
+    "node": "^16",
+    "npm": "6.14.16",
+    "yarn": ">=1.0.0"
+  }
+}
