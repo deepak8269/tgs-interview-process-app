@@ -1,13 +1,13 @@
-import React,{ createContext, useContext, useState, useEffect } from 'react';
-import { getData } from '../apis/api';
+import React, { createContext, useContext, useState, useEffect } from "react";
+import { getData } from "../apis/api";
 
 const DataContext = createContext(null);
 
 const DataProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
-  const [error, setError] = useState('');
-  const [check, setCheck] = useState({});
+  const [error, setError] = useState("");
+  // const [check, setCheck] = useState({});
 
   useEffect(() => {
     getData(setLoading, setData, setError);
@@ -15,14 +15,12 @@ const DataProvider = ({ children }) => {
 
   return (
     <DataContext.Provider
+      // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
         data,
         loading,
-        error,
-        check,
-        setCheck
-      }}
-    >
+        error
+      }}>
       {children}
     </DataContext.Provider>
   );

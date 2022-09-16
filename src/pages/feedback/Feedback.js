@@ -1,15 +1,15 @@
 // external imports
-import React from "react";
-import { useState } from "react";
-import { Grid,Container,Button } from "@mui/material";
+// import React from "react";
+import React, { useState } from "react";
+import { Grid, Container, Button } from "@mui/material";
 import Form from "../../components/formHandler/Form";
-import feedbackFormConfig from '../home/feebackFormConfig'
+import feedbackFormConfig from "../home/feebackFormConfig";
 import Animate from "../../components/Animated";
 import Header from "../../components/header";
 import { NavigationLink } from "../../components/navigationLink/NavigationLink";
- 
+
 const Feedback = () => {
-  const [showFeedbackForm,setShowFeedbackForm]=useState(false);
+  const [showFeedbackForm, setShowFeedbackForm] = useState(false);
 
   const styles = {
     formContainer: {
@@ -21,24 +21,25 @@ const Feedback = () => {
       minHeight: "calc(100vh - 294px)"
     }
   };
-  const feedbackBtn=()=>{
-    setShowFeedbackForm(true)
-  }
+  const feedbackBtn = () => {
+    setShowFeedbackForm(true);
+  };
   return (
     <Animate>
       <Container>
         <Grid container direction="column">
           <Header fullHeader />
-          <NavigationLink/>
+          <NavigationLink />
         </Grid>
       </Container>
-  <Button onClick={feedbackBtn} sx={{marginTop:"1rem"}} variant="contained">
+      <Button onClick={feedbackBtn} sx={{ marginTop: "1rem" }} variant="contained">
         Add new Feedback
       </Button>
       {showFeedbackForm && (
         <Grid sx={styles.formContainer}>
           <Form
             onSubmit={(value) => {
+              // eslint-disable-next-line no-console
               console.log(value);
             }}
             formGridStyles={styles.form}

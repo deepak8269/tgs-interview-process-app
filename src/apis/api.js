@@ -51,15 +51,15 @@
 //   }
 // };
 
-export const getData=async(setLoading,setData,setError)=>{
-  try{
-    setLoading(true)
-    const response=await fetch("/feedbackData.json")
-    const data=await response.json();
-    setLoading(false)
-    setData(data)
-  }catch(error){
-    setError(error)
-    setLoading(false)
+export const getData = async (setLoading, setData, setError) => {
+  try {
+    setLoading(true);
+    const response = await fetch("/feedbackData.json");
+    const data = await response.json();
+    setLoading(false);
+    setData(data);
+  } catch (error) {
+    setError(error);
+    setLoading(false);
   }
-}
+};

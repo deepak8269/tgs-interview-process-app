@@ -9,19 +9,19 @@ export default {
       id: "name",
       label: "Name",
       type: "string",
-      allowNew: true,
+      allowNew: true
     },
     {
       id: "mobile",
       label: "Mobile",
       type: "phone",
-      allowNew: true,
+      allowNew: true
     },
     {
       id: "email",
       label: "Email",
       type: "email",
-      allowNew: true,
+      allowNew: true
     },
     {
       id: "technology",
@@ -34,7 +34,7 @@ export default {
       id: "experience",
       label: "Experience",
       type: "number",
-      allowNew: true,
+      allowNew: true
     }
   ]
 };

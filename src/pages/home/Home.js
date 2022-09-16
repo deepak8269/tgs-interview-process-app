@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Container, Grid, Typography,Button } from "@mui/material";
+import { Container, Grid, Typography, Button } from "@mui/material";
 import Animate from "../../components/Animated";
 import Header from "../../components/header";
 import Form from "../../components/formHandler/Form";
 import candidateFormConfig from "./candidateFormConfig";
-import {Link} from 'react-router-dom'
+// import { Link } from "react-router-dom";
 import { NavigationLink } from "../../components/navigationLink/NavigationLink";
+
 const styles = {
   formContainer: {
     mt: (theme) => theme.spacing(10),
@@ -24,13 +25,12 @@ const Home = () => {
     setShowForm(true);
   };
 
- 
   return (
     <Animate>
       <Container>
         <Grid container direction="column">
           <Header fullHeader />
-         <NavigationLink/>
+          <NavigationLink />
           <Grid item alignSelf="center">
             <Typography variant="h4">Welcome to Team Geek Solutions</Typography>
           </Grid>
@@ -39,20 +39,20 @@ const Home = () => {
       <Button onClick={onBtnClick} variant="contained">
         Add new candidate
       </Button>
-      
+
       {showForm && (
         <Grid sx={styles.formContainer}>
           <Form
             onSubmit={(value) => {
+              // eslint-disable-next-line no-console
               console.log(value);
-              setShowForm(false)
+              setShowForm(false);
             }}
             formGridStyles={styles.form}
             formData={candidateFormConfig}
           />
         </Grid>
       )}
-      
     </Animate>
   );
 };
