@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Container, Grid, Typography } from "@mui/material";
-// import { useNavigateUtil } from "../../utils/useNavigateUtil";
+import { Container, Grid, Typography,Button } from "@mui/material";
 import Animate from "../../components/Animated";
 import Header from "../../components/header";
 import Form from "../../components/formHandler/Form";
 import candidateFormConfig from "./candidateFormConfig";
-
+import {Link} from 'react-router-dom'
+import { NavigationLink } from "../../components/navigationLink/NavigationLink";
 const styles = {
   formContainer: {
     mt: (theme) => theme.spacing(10),
@@ -21,35 +21,38 @@ const Home = () => {
   const [showForm, setShowForm] = useState(false);
 
   const onBtnClick = () => {
-    // navigate(loggedIn ? "/welcome" : "/login");
     setShowForm(true);
   };
 
+ 
   return (
     <Animate>
       <Container>
         <Grid container direction="column">
           <Header fullHeader />
+         <NavigationLink/>
           <Grid item alignSelf="center">
             <Typography variant="h4">Welcome to Team Geek Solutions</Typography>
           </Grid>
         </Grid>
       </Container>
-      <button onClick={onBtnClick} type="button">
+      <Button onClick={onBtnClick} variant="contained">
         Add new candidate
-      </button>
+      </Button>
+      
       {showForm && (
         <Grid sx={styles.formContainer}>
           <Form
-            onSubmit={(aa) => {
-              // eslint-disable-next-line no-console
-              console.log(aa);
+            onSubmit={(value) => {
+              console.log(value);
+              setShowForm(false)
             }}
             formGridStyles={styles.form}
             formData={candidateFormConfig}
           />
         </Grid>
       )}
+      
     </Animate>
   );
 };

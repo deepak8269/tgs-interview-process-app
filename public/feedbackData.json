@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "interviewerName":"Priyanka Sharma",
+    "candidateName": "Rajesh",
+    "candidateMobile": 1234,
+    "candidateEmailId": "rajesh@gmail.com",
+    "candidateTechnology": "React",
+    "candidateExperience": 1,
+    "candidateLocation": "Pune",
+    "candidateStatus":"Fail",
+    "interviewDate":"01/08/2022"
+  },
+  {
+    "id": 2,
+    "candidateName": "Akash",
+    "candidateMobile": 1234,
+    "interviewerName":"Shadman Khan",
+    "candidateEmailId": "akash@gmail.com",
+    "candidateTechnology": "Android",
+    "candidateExperience": 1,
+    "candidateLocation": "Pune",
+    "candidateStatus":"Pass",
+    "interviewDate":"07/09/2022"
+    
+  },
+  {
+    "id": 3,
+    "candidateName": "Kishan",
+    "interviewerName":"Priyanka Sharma",
+    "candidateMobile": 1234,
+    "candidateEmailId": "kishan@gmail.com",
+    "candidateTechnology": "Java",
+    "candidateExperience": 2,
+    "candidateLocation": "Pune",
+    "candidateStatus":"Pass",
+    "interviewDate":"11/08/2022"
+  },
+  {
+    "id": 4,
+    "candidateName": "Pankaj",
+    "interviewerName":"Shadman Khan",
+    "candidateMobile": 1234,
+    "candidateEmailId": "pankaj@gmail.com",
+    "candidateTechnology": "Angular",
+    "candidateExperience": 2,
+    "candidateLocation": "Indore",
+    "candidateStatus":"Fail",
+    "interviewDate":"03/09/2022"
+  }
+]

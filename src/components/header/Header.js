@@ -3,7 +3,6 @@ import { Grid } from "@mui/material";
 import fullLogo from "../../assets/full-header-logo.png";
 import partialLogo from "../../assets/partial-header-logo.png";
 import { useNavigateUtil } from "../../utils/useNavigateUtil";
-
 const styles = {
   header: {
     display: "flex",
@@ -35,6 +34,7 @@ const Header = ({ fullHeader }) => {
         <img src={fullHeader ? fullLogo : partialLogo} alt="logo" width={fullHeader ? 250 : 48} />
       </Grid>
     </Grid>
+      
   );
 };
 

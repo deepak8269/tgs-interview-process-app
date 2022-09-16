@@ -17,10 +17,12 @@ import store, { persistor } from "./store";
 
 // Theme Customizer
 import ThemeCustomizer from "./theme";
+import { DataProvider } from "./context/dataContext";
 
 const App = () => (
   <Provider store={store}>
     <PersistGate persistor={persistor}>
+      <DataProvider>
       <ThemeCustomizer>
         <BrowserRouter basename="/">
           <Suspense fallback={<Loader />}>
@@ -29,6 +31,7 @@ const App = () => (
           </Suspense>
         </BrowserRouter>
       </ThemeCustomizer>
+      </DataProvider>
     </PersistGate>
   </Provider>
 );
