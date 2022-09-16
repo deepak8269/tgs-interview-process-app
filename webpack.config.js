@@ -131,28 +131,28 @@ module.exports = (_env, argv) => {
       ]
     };
 
-    config.plugins.push(
-      new webpack.DefinePlugin({
-        "process.env": {
-          // NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-          PORT: JSON.stringify(process.env.PORT),
-          PUBLIC_URL: JSON.stringify(process.env.PUBLIC_URL),
-          REACT_APP_THEME: JSON.stringify(process.env.REACT_APP_THEME),
-          REACT_APP_AWS_ACCESS_KEY: JSON.stringify(process.env.REACT_APP_AWS_ACCESS_KEY),
-          REACT_APP_AWS_SECRET_KEY: JSON.stringify(process.env.REACT_APP_AWS_SECRET_KEY),
-          REACT_APP_BUCKET_NAME: JSON.stringify(process.env.REACT_APP_BUCKET_NAME),
-          REACT_APP_REDIRECT_URL_LINKEDIN: JSON.stringify(
-            process.env.REACT_APP_REDIRECT_URL_LINKEDIN
-          ),
-          REACT_APP_LINKEDIN_CLIENT_ID: JSON.stringify(process.env.REACT_APP_LINKEDIN_CLIENT_ID),
-          REACT_APP_LINKEDIN_CLIENT_SECRET: JSON.stringify(
-            process.env.REACT_APP_LINKEDIN_CLIENT_SECRET
-          ),
-          REACT_APP_AWS_API_URL: JSON.stringify(process.env.REACT_APP_AWS_API_URL),
-          REACT_APP_AWS_API_STAGE: JSON.stringify(process.env.REACT_APP_AWS_API_STAGE)
-        }
-      })
-    );
+    // config.plugins.push(
+    //   new webpack.DefinePlugin({
+    //     "process.env": {
+    //       // NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+    //       PORT: JSON.stringify(process.env.PORT),
+    //       PUBLIC_URL: JSON.stringify(process.env.PUBLIC_URL),
+    //       REACT_APP_THEME: JSON.stringify(process.env.REACT_APP_THEME),
+    //       REACT_APP_AWS_ACCESS_KEY: JSON.stringify(process.env.REACT_APP_AWS_ACCESS_KEY),
+    //       REACT_APP_AWS_SECRET_KEY: JSON.stringify(process.env.REACT_APP_AWS_SECRET_KEY),
+    //       REACT_APP_BUCKET_NAME: JSON.stringify(process.env.REACT_APP_BUCKET_NAME),
+    //       REACT_APP_REDIRECT_URL_LINKEDIN: JSON.stringify(
+    //         process.env.REACT_APP_REDIRECT_URL_LINKEDIN
+    //       ),
+    //       REACT_APP_LINKEDIN_CLIENT_ID: JSON.stringify(process.env.REACT_APP_LINKEDIN_CLIENT_ID),
+    //       REACT_APP_LINKEDIN_CLIENT_SECRET: JSON.stringify(
+    //         process.env.REACT_APP_LINKEDIN_CLIENT_SECRET
+    //       ),
+    //       REACT_APP_AWS_API_URL: JSON.stringify(process.env.REACT_APP_AWS_API_URL),
+    //       REACT_APP_AWS_API_STAGE: JSON.stringify(process.env.REACT_APP_AWS_API_STAGE)
+    //     }
+    //   })
+    // );
 
     config.performance = { hints: false };
   }
