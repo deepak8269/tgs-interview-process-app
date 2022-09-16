@@ -40,7 +40,14 @@ module.exports = (_env, argv) => {
 
     devServer: {
       port: 3000,
-      historyApiFallback: true
+      historyApiFallback: true,
+      index: "index.html",
+      contentBase: path.join(__dirname, "dist"),
+      compress: true,
+      hot: true,
+      // port: 9000,
+      // writeToDisk:true,
+      open: "chrome"
     },
 
     module: {
@@ -134,7 +141,7 @@ module.exports = (_env, argv) => {
     config.plugins.push(
       new webpack.DefinePlugin({
         "process.env": {
-          // NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+          NODE_ENV: JSON.stringify(process.env.NODE_ENV),
           PORT: JSON.stringify(process.env.PORT),
           PUBLIC_URL: JSON.stringify(process.env.PUBLIC_URL),
           REACT_APP_THEME: JSON.stringify(process.env.REACT_APP_THEME),
