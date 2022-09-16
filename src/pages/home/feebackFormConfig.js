@@ -1,7 +1,12 @@
-import { candidateList, interviewerList, technologyList,statusList } from "../../mocks/mockForInterview";
+import {
+  candidateList,
+  interviewerList,
+  technologyList,
+  statusList
+} from "../../mocks/mockForInterview";
 
 export default {
-    isPrimaryButtonVisible: true,
+  isPrimaryButtonVisible: true,
   isSecondaryButtonVisible: false,
   primaryButtonText: "Submit",
   fields: [
@@ -23,27 +28,27 @@ export default {
       id: "dateOfInterview",
       label: "Date of Interview",
       type: "dateRange",
+      allowNew: true
+    },
+    {
+      id: "role",
+      label: "Role",
+      type: "dropdown",
       allowNew: true,
+      options: technologyList
     },
     {
-        id: "role",
-        label: "Role",
-        type: "dropdown",
-        allowNew: true,
-        options:technologyList
-    },
-    {
-        id: "status",
-        label: "Status",
-        type: "dropdown",
-        allowNew: true,
-        options:statusList
+      id: "status",
+      label: "Status",
+      type: "dropdown",
+      allowNew: true,
+      options: statusList
     },
     {
       id: "feedback",
       label: "Feedback",
       type: "string",
-      allowNew: true,
+      allowNew: true
     }
   ]
-}
+};
